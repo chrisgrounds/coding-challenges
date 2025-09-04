@@ -48,7 +48,6 @@ impl FileInformation {
 
 struct FileContents(String);
 
-
 fn mconcat(fis: Vec<FileInformation>) -> FileInformation {
   let mut accumulated_file_information = FileInformation {
     ..Default::default()
