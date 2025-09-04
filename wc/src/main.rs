@@ -48,6 +48,7 @@ impl FileInformation {
 
 struct FileContents(String);
 
+// Because FileInformation is monoidal we can flatten a Vec of them
 fn mconcat(fis: Vec<FileInformation>) -> FileInformation {
   let mut accumulated_file_information = FileInformation {
     ..Default::default()
