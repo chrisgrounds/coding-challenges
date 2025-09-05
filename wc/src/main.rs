@@ -71,10 +71,8 @@ fn get_words(FileContents(fc): &FileContents) -> FileInformation {
 }
 
 fn get_lines(FileContents(fc): &FileContents) -> FileInformation {
-  let lines: Vec<_> = fc.split("\n").collect();
-
   FileInformation {
-    lines: Some(lines.iter().count()),
+    lines: Some(fc.lines().count()),
     ..Default::default()
   }
 }
